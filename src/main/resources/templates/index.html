@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head th:replace="fragments/header :: header('Welcome Home!')"></head>
+
+<body>
+    <div th:replace="fragments/navbar :: navbar"></div>
+
+    <div class="container">
+        <h1>Allowance Calculator</h1>
+        <form th:action="@{/}" method="post">
+            <input type="submit" name="begin" value="Click Here to Begin" />
+        </form>
+    </div>
+</body>
+</html>

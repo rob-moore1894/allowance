@@ -1,5 +1,7 @@
 package dev.robmoore.allowance.models;
 
+import org.hibernate.validator.constraints.Email;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -22,6 +24,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Email
     @Column(nullable = false)
     private String email;
 
