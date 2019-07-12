@@ -17,4 +17,6 @@ public class HomeController {
     @PostMapping("/")
     public String chorePage() { return "redirect:/chores"; }
 
+//    @PostMapping("/register")
+//    public String createUser(User)
 }

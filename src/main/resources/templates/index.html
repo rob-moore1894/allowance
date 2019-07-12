@@ -6,11 +6,29 @@
 <body>
     <div th:replace="fragments/navbar :: navbar"></div>
 
+<!--Login and Registration-->
     <div class="container">
         <h1>Allowance Calculator</h1>
+        <div id="loginSection">
         <form th:action="@{/}" method="post">
-            <input type="submit" name="begin" value="Click Here to Begin" />
+            <div>Log In Here</div>
+            <input type="text" id="username" placeholder="Username" required="required"/>
+            <input type="password" id="password" placeholder="Password" required="required"/>
+            <input type="submit" name="login" value="Login" />
         </form>
+        </div>
+
+        <div id="registerSection">
+        <form th:action="@{/register}" method="post">
+            <div>New User? Register Here</div>
+            <input type="text" id="newUsername" placeholder="Username" required="required"/>
+            <input type="password" id="newPassword" placeholder="Password" required="required"/>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required="required"/>
+        </form>
+        </div>
+
     </div>
+<!--End of Login and Registration-->
+
 </body>
 </html>
